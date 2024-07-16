@@ -65,7 +65,7 @@ wrangling <- function(user_input) {
   pairs_id <- paste0("pairs_", user_input)
 
   if (!all(c(votes_id, members_id) %in% names(house))) {
-    stop(paste("Data for Congress", user_input, "not found. Please run loading('", user_input, "') first.", sep=""))
+    stop(paste("Data for Congress ", user_input, " not found. Please run loading('", user_input, "') first.", sep=""))
   }
 
   house[[votes_id]] <<- house[[votes_id]] %>%
