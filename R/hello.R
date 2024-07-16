@@ -7,7 +7,9 @@ pacman::p_load(
 #'@param user_input Number equalling either 91, 97, 102, 107 or 117.
 #'@return A list object 'house' containing members and their votes of a chosen Congress. This can be done repetitively, for multiple congresses.
 #'@export
-#'@example loading("91") will create an object for Congress 91, consisting of votes_91 and members_91.
+#'@examples
+#'loading("91")
+#'loading("97")
 loading <- function(user_input) {
   valid_inputs <- c("91", "97", "102", "107", "117")
   if (!user_input %in% valid_inputs) {
@@ -33,8 +35,9 @@ loading <- function(user_input) {
 #'@param user_input Number equalling either 91, 97, 102, 107 or 117.
 #'@return An updated votes_id, pairs_id which displays all possible pairs of representatives in a given Congress.
 #'@export
-#'@example wrangling("91") will update votes_91 to include information from members_91 and also create a pairs_91 object that contains all possible pairs
-#'of representatives in a given Congress.
+#'@examples
+#'wrangling("91")
+#'wrangling("97")
 wrangling <- function(user_input) {
   valid_inputs <- c("91", "97", "102", "107", "117")
   if (!user_input %in% valid_inputs) {
