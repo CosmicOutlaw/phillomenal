@@ -30,9 +30,9 @@
 #' @docType data
 NULL
 
-#' House votes data for the 91st Congress
+#' House roll calls for the 91st Congress
 #'
-#' Dataset containing voting information for the 91st Congress (1969-1971).
+#' Data set containing voting information for the 91st Congress (1969-1971).
 #'
 #' @format A data frame with the following variables:
 #' \describe{
@@ -60,9 +60,9 @@ NULL
 #' @docType data
 NULL
 
-#' House votes data for the 97th Congress
+#' House roll calls for the 97th Congress
 #'
-#' Dataset containing voting information for the 97th Congress (1981-1983).
+#' Data set containing voting information for the 97th Congress (1981-1983).
 #'
 #' @format A data frame with the same structure as HS91_votes.
 #' @seealso \code{\link{HS91_votes}} for a detailed description of the variables.
@@ -70,9 +70,9 @@ NULL
 #' @docType data
 NULL
 
-#' House votes data for the 102nd Congress
+#' House roll calls for the 102nd Congress
 #'
-#' Dataset containing voting information for the 102nd Congress (1991-1993).
+#' Data set containing voting information for the 102nd Congress (1991-1993).
 #'
 #' @format A data frame with the same structure as HS91_votes.
 #' @seealso \code{\link{HS91_votes}} for a detailed description of the variables.
@@ -80,9 +80,9 @@ NULL
 #' @docType data
 NULL
 
-#' House votes data for the 107th Congress
+#' House roll calls for the 107th Congress
 #'
-#' Dataset containing voting information for the 107th Congress (2001-2003).
+#' Data set containing voting information for the 107th Congress (2001-2003).
 #'
 #' @format A data frame with the same structure as HS91_votes.
 #' @seealso \code{\link{HS91_votes}} for a detailed description of the variables.
@@ -90,9 +90,9 @@ NULL
 #' @docType data
 NULL
 
-#' House votes data for the 117th Congress
+#' House roll calls for the 117th Congress
 #'
-#' Dataset containing voting information for the 117th Congress (2021-2023).
+#' Data set containing voting information for the 117th Congress (2021-2023).
 #'
 #' @format A data frame with the same structure as HS91_votes.
 #' @seealso \code{\link{HS91_votes}} for a detailed description of the variables.
