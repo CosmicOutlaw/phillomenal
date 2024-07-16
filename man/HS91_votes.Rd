@@ -3,7 +3,7 @@
 \docType{data}
 \name{HS91_votes}
 \alias{HS91_votes}
-\title{House votes data for the 91st Congress}
+\title{House roll calls for the 91st Congress}
 \format{
 A data frame with the following variables:
 \describe{
@@ -29,5 +29,5 @@ A data frame with the following variables:
 }
 }
 \description{
-Dataset containing voting information for the 91st Congress (1969-1971).
+Data set containing voting information for the 91st Congress (1969-1971).
 }

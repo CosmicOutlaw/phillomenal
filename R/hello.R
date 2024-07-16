@@ -33,13 +33,11 @@ loading <- function(user_input) {
 
   house[[members_id]] <<- HSall_members %>%
     filter(chamber == "House") %>%
-    filter(congress == user_input) %>%
-    View()
+    filter(congress == user_input)
 
   house[[votes_id]] <<- get(paste0("HS", user_input, "_votes")) %>%
     filter(chamber == "House") %>%
-    filter(!icpsr %in% house[[members_id]]$icpsr[house[[members_id]]$chamber == "President"]) %>%
-    View()
+    filter(!icpsr %in% house[[members_id]]$icpsr[house[[members_id]]$chamber == "President"])
 }
 
 #'@title Wrangling of U.S. House data sets

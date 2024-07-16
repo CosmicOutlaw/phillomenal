@@ -3,12 +3,12 @@
 \docType{data}
 \name{HS107_votes}
 \alias{HS107_votes}
-\title{House votes data for the 107th Congress}
+\title{House roll calls for the 107th Congress}
 \format{
 A data frame with the same structure as HS91_votes.
 }
 \description{
-Dataset containing voting information for the 107th Congress (2001-2003).
+Data set containing voting information for the 107th Congress (2001-2003).
 }
 \seealso{
 \code{\link{HS91_votes}} for a detailed description of the variables.
