@@ -27,7 +27,10 @@ loading <- function(user_input) {
   members_id <- paste0("members_", user_input)
   votes_id <- paste0("votes_", user_input)
 
-  house <<- list()
+  if (!exists("house") || !is.list(house)) {
+    house <<- list()
+  }
+
   house[[members_id]] <<- HSall_members %>%
     filter(chamber == "House") %>%
     filter(congress == user_input)
@@ -60,6 +63,10 @@ wrangling <- function(user_input) {
   votes_id <- paste0("votes_", user_input)
   members_id <- paste0("members_", user_input)
   pairs_id <- paste0("pairs_", user_input)
+
+  if (!all(c(votes_id, members_id) %in% names(house))) {
+    stop(paste("Data for Congress", user_input, "not found. Please run loading('", user_input, "') first.", sep=""))
+  }
 
   house[[votes_id]] <<- house[[votes_id]] %>%
     left_join(
