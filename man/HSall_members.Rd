@@ -4,6 +4,32 @@
 \name{HSall_members}
 \alias{HSall_members}
 \title{House members data}
+\format{
+A data frame with the following variables:
+\describe{
+  \item{congress}{Integer 1+. The number of the congress that this member's row refers to.}
+  \item{chamber}{Character. "House", "Senate", or "President". The chamber in which the member served.}
+  \item{icpsr}{Integer 1-99999. ID code which identifies the member.}
+  \item{state_icpsr}{Integer 0-99. Identifier for the state represented by the member.}
+  \item{district_code}{Integer 0-99. Identifier for the district that the member represents within their state.}
+  \item{state_abbrev}{Character. Two-character postal abbreviation for state.}
+  \item{party_code}{Integer 1-9999. Identifying code for the member's party.}
+  \item{occupancy}{Integer 1+. ICPSR occupancy code.}
+  \item{last_means}{Integer 1-5. ICPSR Attain-Office Code.}
+  \item{bioname}{Character. Name of the member, surname first.}
+  \item{bioguide_id}{Character. Member identifier in the Biographical Directory of Congress.}
+  \item{born}{Integer. Year of member's birth.}
+  \item{died}{Integer. Year of member's death.}
+  \item{nominate_dim1}{Numeric. NOMINATE first dimension estimate.}
+  \item{nominate_dim2}{Numeric. NOMINATE second dimension estimate.}
+  \item{nominate_log_likelihood}{Numeric. Log-likelihood of the NOMINATE estimate.}
+  \item{nominate_geo_mean_probability}{Numeric. Geometric mean probability of NOMINATE estimate.}
+  \item{nominate_number_of_votes}{Integer. Number of votes cast by the member during a given congress.}
+  \item{conditional}{Integer 0-1. Indicates if NOMINATE was estimated conditionally for a given member.}
+  \item{nokken_poole_dim1}{Numeric. Nokken-Poole First dimension estimate.}
+  \item{nokken_poole_dim2}{Numeric. Nokken-Poole Second dimension estimate.}
+}
+}
 \description{
-House members data
+A dataset containing biographical and ideological information about U.S. House Representatives.
 }

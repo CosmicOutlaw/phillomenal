@@ -30,9 +30,9 @@
 #' @docType data
 NULL
 
-#' House votes data for multiple Congresses
+#' House votes data for the 91st Congress
 #'
-#' Datasets containing voting information for different Congresses (91, 97, 102, 107, 117).
+#' Dataset containing voting information for the 91st Congress (1969-1971).
 #'
 #' @format A data frame with the following variables:
 #' \describe{
@@ -57,9 +57,45 @@ NULL
 #'   \item{prob}{Numeric. Estimated probability, based on NOMINATE, of the member making the vote as recorded.}
 #' }
 #' @name HS91_votes
+#' @docType data
+NULL
+
+#' House votes data for the 97th Congress
+#'
+#' Dataset containing voting information for the 97th Congress (1981-1983).
+#'
+#' @format A data frame with the same structure as HS91_votes.
+#' @seealso \code{\link{HS91_votes}} for a detailed description of the variables.
 #' @name HS97_votes
+#' @docType data
+NULL
+
+#' House votes data for the 102nd Congress
+#'
+#' Dataset containing voting information for the 102nd Congress (1991-1993).
+#'
+#' @format A data frame with the same structure as HS91_votes.
+#' @seealso \code{\link{HS91_votes}} for a detailed description of the variables.
 #' @name HS102_votes
+#' @docType data
+NULL
+
+#' House votes data for the 107th Congress
+#'
+#' Dataset containing voting information for the 107th Congress (2001-2003).
+#'
+#' @format A data frame with the same structure as HS91_votes.
+#' @seealso \code{\link{HS91_votes}} for a detailed description of the variables.
 #' @name HS107_votes
+#' @docType data
+NULL
+
+#' House votes data for the 117th Congress
+#'
+#' Dataset containing voting information for the 117th Congress (2021-2023).
+#'
+#' @format A data frame with the same structure as HS91_votes.
+#' @seealso \code{\link{HS91_votes}} for a detailed description of the variables.
 #' @name HS117_votes
 #' @docType data
 NULL
