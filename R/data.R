@@ -6,30 +6,30 @@ NULL
 
 #' House 91 votes data
 #'
-#' @name HS91_votes
+#' @name votes_91
 #' @docType data
 NULL
 
 #' House 97 votes data
 #'
-#' @name HS97_votes
+#' @name votes_97
 #' @docType data
 NULL
 
 #' House 102 votes data
 #'
-#' @name HS102_votes
+#' @name votes_102
 #' @docType data
 NULL
 
 #' House 107 votes data
 #'
-#' @name HS107_votes
+#' @name votes_107
 #' @docType data
 NULL
 
 #' House 117 votes data
 #'
-#' @name HS117_votes
+#' @name votes_117
 #' @docType data
 NULL

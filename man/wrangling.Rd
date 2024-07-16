@@ -7,7 +7,7 @@
 wrangling(user_input)
 }
 \arguments{
-\item{user_input}{Number equalling either 91, 97, 102, 107 or 117.}
+\item{user_input}{Number equaling either 91, 97, 102, 107 or 117.}
 }
 \value{
 An updated votes_id, pairs_id which displays all possible pairs of representatives in a given Congress.
@@ -17,6 +17,6 @@ Wrangles the objects created in loading(), namely votes_id and members_id, by me
 votes_id is being enhanced by information about each representative in order to allow the creation of pairs_id for the chosen Congress.
 }
 \examples{
+loading("91")
 wrangling("91")
-wrangling("97")
 }

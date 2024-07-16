@@ -3,4 +3,6 @@
 export("%>%")
 export(loading)
 export(wrangling)
+import(dplyr)
 importFrom(magrittr,"%>%")
+importFrom(utils,combn)

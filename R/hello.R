@@ -1,4 +1,11 @@
 library(dplyr)
+library(usethis)
+
+#' @import dplyr
+NULL
+
+#' @importFrom utils combn
+NULL
 
 #'@importFrom magrittr %>%
 #'@export %>%
@@ -11,6 +18,7 @@ library(dplyr)
 #'loading("91")
 #'loading("97")
 loading <- function(user_input) {
+
   valid_inputs <- c("91", "97", "102", "107", "117")
   if (!user_input %in% valid_inputs) {
     stop("Invalid input. Please choose from the following United States Congresses: 91, 97, 102, 107, 117")
@@ -18,13 +26,13 @@ loading <- function(user_input) {
 
   members_id <- paste0("members_", user_input)
   votes_id <- paste0("votes_", user_input)
-  file_id <- paste0("data/HS", user_input, "_votes.csv")
 
   house <<- list()
-  house[[members_id]] <<- read.csv("data/HSall_members.csv") %>%
+  house[[members_id]] <<- HSall_members %>%
     filter(chamber == "House") %>%
     filter(congress == user_input)
-  house[[votes_id]] <<- read.csv(file_id) %>%
+
+  house[[votes_id]] <<- get(paste0("votes_", user_input)) %>%
     filter(chamber == "House") %>%
     filter(!icpsr %in% house[[members_id]]$icpsr[house[[members_id]]$chamber == "President"])
 }
@@ -32,13 +40,18 @@ loading <- function(user_input) {
 #'@title Wrangling of U.S. House data sets
 #'@description Wrangles the objects created in loading(), namely votes_id and members_id, by merging select columns of both objects. Specifically,
 #'votes_id is being enhanced by information about each representative in order to allow the creation of pairs_id for the chosen Congress.
-#'@param user_input Number equalling either 91, 97, 102, 107 or 117.
+#'@param user_input Number equaling either 91, 97, 102, 107 or 117.
 #'@return An updated votes_id, pairs_id which displays all possible pairs of representatives in a given Congress.
 #'@export
 #'@examples
+#'loading("91")
 #'wrangling("91")
-#'wrangling("97")
 wrangling <- function(user_input) {
+
+  if (!exists("house") || !is.list(house) || length(house) == 0) {
+    stop("Please run loading() function first to create the house object.")
+  }
+
   valid_inputs <- c("91", "97", "102", "107", "117")
   if (!user_input %in% valid_inputs) {
     stop("Invalid input. Please choose from the following United States Congresses: 91, 97, 102, 107, 117")
@@ -80,4 +93,3 @@ wrangling <- function(user_input) {
         TRUE ~ "CPP")) %>%
     arrange(icpsr1, icpsr2)
 }
-

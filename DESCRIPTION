@@ -9,5 +9,7 @@ Description: The 'phillomenal' package includes several data sets of United Stat
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-Imports: magrittr, dplyr
+Imports: magrittr, dplyr, usethis
 RoxygenNote: 7.3.1
+Depends: 
+    R (>= 2.10)
