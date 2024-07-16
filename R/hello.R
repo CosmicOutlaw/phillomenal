@@ -1,7 +1,6 @@
-pacman::p_load(
-  dplyr,usethis,roxygen2,devtools
-)
-
+library(magrittr)
+#'@importFrom magrittr %>%
+#'@export %>%
 #'@title Loading of U.S. House data sets.
 #'@description Loads United States House Representatives and their votes into a house list, based on the user's chosen Congress.
 #'@param user_input Number equalling either 91, 97, 102, 107 or 117.
