@@ -1,4 +1,5 @@
-library(magrittr)
+library(dplyr)
+
 #'@importFrom magrittr %>%
 #'@export %>%
 #'@title Loading of U.S. House data sets.

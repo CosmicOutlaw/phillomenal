@@ -1,13 +1,13 @@
 Package: phillomenal
 Type: Package
-Title: What the Package Does (Title Case)
+Title: U.S. Congress Roll Call Analysis
 Version: 0.1.0
-Author: Who wrote it
+Author: Phillip Seiffert
 Maintainer: The package maintainer <p.seiffert@campus.lmu.de>
 Description: The 'phillomenal' package includes several data sets of United States Congress roll calls and thus far provides two functions. loading() yields an import of the user-desired Congress while wrangling() prepares the data to be analysed in congressional voting patterns.
     Use four spaces when indenting paragraphs within the Description.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-Imports: magrittr
+Imports: magrittr, dplyr
 RoxygenNote: 7.3.1
