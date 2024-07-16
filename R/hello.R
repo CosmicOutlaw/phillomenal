@@ -1,8 +1,13 @@
 pacman::p_load(
-  dplyr,usethis
+  dplyr,usethis,roxygen2,devtools
 )
 
-# Loading function: loads House of Representatives and their votes into a house list, based on user_input and the chosen Congress
+#'@title Loading of U.S. House data sets.
+#'@description Loads United States House Representatives and their votes into a house list, based on the user's chosen Congress.
+#'@param user_input Number equalling either 91, 97, 102, 107 or 117.
+#'@return A list object 'house' containing members and their votes of a chosen Congress. This can be done repetitively, for multiple congresses.
+#'@export
+#'@example loading("91") will create an object for Congress 91, consisting of votes_91 and members_91.
 loading <- function(user_input) {
   valid_inputs <- c("91", "97", "102", "107", "117")
   if (!user_input %in% valid_inputs) {
@@ -22,7 +27,14 @@ loading <- function(user_input) {
     filter(!icpsr %in% house[[members_id]]$icpsr[house[[members_id]]$chamber == "President"])
 }
 
-# Wrangling function:
+#'@title Wrangling of U.S. House data sets
+#'@description Wrangles the objects created in loading(), namely votes_id and members_id, by merging select columns of both objects. Specifically,
+#'votes_id is being enhanced by information about each representative in order to allow the creation of pairs_id for the chosen Congress.
+#'@param user_input Number equalling either 91, 97, 102, 107 or 117.
+#'@return An updated votes_id, pairs_id which displays all possible pairs of representatives in a given Congress.
+#'@export
+#'@example wrangling("91") will update votes_91 to include information from members_91 and also create a pairs_91 object that contains all possible pairs
+#'of representatives in a given Congress.
 wrangling <- function(user_input) {
   valid_inputs <- c("91", "97", "102", "107", "117")
   if (!user_input %in% valid_inputs) {
@@ -42,7 +54,6 @@ wrangling <- function(user_input) {
       by = "icpsr") %>%
     arrange(icpsr, rollnumber)
 
-  # New code to create pairs and analyze them
   house[[pairs_id]] <<- t(combn(unique(house[[votes_id]]$icpsr), 2))
   colnames(house[[pairs_id]]) <- c("icpsr1", "icpsr2")
 
